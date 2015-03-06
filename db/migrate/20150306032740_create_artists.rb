@@ -5,6 +5,8 @@ class CreateArtists < ActiveRecord::Migration
       t.text   :biography
       t.text   :artist_statement
       t.string :password_digest
+      t.string :picture_url
+      t.timestamps
     end
   end
 end
