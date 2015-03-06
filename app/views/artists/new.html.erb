@@ -1,0 +1,23 @@
+
+<h1>Sign Up as a New Artist</h1>
+
+<%= form_for(@artist, class: "form-horizontal") do |f| %>
+  <div class="form-group">
+  <%= f.label :username %>:
+  <%= f.text_field :username %><br />
+
+  <%= f.label :biography %>:
+  <%= f.text_area :biography %><br />
+
+  <%= f.label :artist_statement %>:
+  <%= f.text_area :artist_statement %><br />
+
+  <%= f.label :password %>:
+  <%= f.password_field :password %><br />
+
+  <%= f.label :password_confirmation %>:
+  <%= f.password_field :password_confirmation %><br />
+
+  <%= f.submit %>
+</div>
+<% end %>
