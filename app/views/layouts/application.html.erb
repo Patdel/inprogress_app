@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>InprogressApp</title>
+  <title>In Progress</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <%= link_to "In Progress", root_path, class: "navbar-brand" %>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse navbar-right">
+      <%= link_to "Log In as Artist", sessions_new_path, class: "navbar-brand" %>
+    </div><!--/.navbar-collapse -->
+  </div>
+</nav>
 <%= yield %>
 
 </body>
