@@ -1,0 +1,22 @@
+<h1>Your Project</h1>
+
+<%= form_for(@project, class: "form-horizontal") do |f| %>
+  <div class="form-group">
+  <%= f.label :name %>:
+  <%= f.text_field :name %><br />
+
+  <%= f.label :description %>:
+  <%= f.text_area :description %><br />
+
+  <%= f.label :picture_url  %>:
+  <%= f.text_area :picture_url %><br />
+
+
+  <%= f.submit %>
+</div>
+<% end %>
+
+
+<!-- name
+description
+picture_url -->

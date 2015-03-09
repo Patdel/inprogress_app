@@ -6,4 +6,17 @@
       <%= link_to "Sign Up!", new_artist_path, class: "btn btn-primary btn-lg" %>
     </p>
   </div>
+
+  <div>
+    <ul>
+  <% @artists.each do |a| %>
+  <!-- <li><#%= image_tag(a.picture_url) %></li> -->
+    <img src="<%= a.picture_url %>">
+    <li><%= a.username %></li>
+  <% end %>
+</ul>
+
+  </div>
 </div>
+
+

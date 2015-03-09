@@ -9,8 +9,8 @@ class ArtistsController < ApplicationController
   end
 
   def create
-    @artist = Artist.create(artist_params)
-    redirect artists_path(artist)
+    artist = Artist.create(artist_params)
+    redirect_to artist_path(artist)
   end
 
   def show
@@ -25,7 +25,8 @@ class ArtistsController < ApplicationController
       :biography,
       :artist_statement,
       :password,
-      :password_confirmation
+      :password_confirmation,
+      :picture_url
     )
   end
 
