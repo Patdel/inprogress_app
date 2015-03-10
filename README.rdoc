@@ -2,6 +2,11 @@ In Progress is an application that aims to help new and established artists to p
 By using this application, a user should be able to see the work of any artist, including a biography, an artist statement, and pictures of the work they completed or are working on, hence the name "In Progress." If a user is an artist and wants to post his or her work, she can sign up, log in, and access her own page. Once in there, he or she has the chance to post the work in the format of a "project" by giving the project a name, a description, and adding pictures. The artist can then add as many projects as he or she wants.
 
 
+The Heroku deployed app is in "https://hidden-ravine-3266.herokuapp.com/#"
+
+
+
+
 
 == README
 
