@@ -1,4 +1,4 @@
-<h1>Your Project</h1>
+<h1>Your New Project</h1>
 
 <%= form_for(@project, class: "form-horizontal") do |f| %>
   <div class="form-group">
@@ -11,6 +11,7 @@
   <%= f.label :picture_url  %>:
   <%= f.text_area :picture_url %><br />
 
+  <%= f.hidden_field :artist_id %>
 
   <%= f.submit %>
 </div>

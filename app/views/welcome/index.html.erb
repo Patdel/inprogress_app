@@ -8,15 +8,43 @@
   </div>
 
   <div>
-    <ul>
-  <% @artists.each do |a| %>
-  <!-- <li><#%= image_tag(a.picture_url) %></li> -->
-    <img src="<%= a.picture_url %>">
-    <li><%= a.username %></li>
-  <% end %>
-</ul>
 
   </div>
 </div>
 
+<div>
 
+    <!-- <h2>Artists</h2>
+    <ul class="list-unstyled">
+       <#% @artists.each do |a| %>
+
+       <img src="<#%= a.picture_url %>">
+       <li><h3><#%= a.username %></h3></li>
+       <#% end %>
+    </ul> -->
+
+</div>
+
+<% @artists.each do |artist| %>
+  <div class="media">
+    <a class="pull-left" href="#">
+      <img class="media-object" src="<%= artist.picture_url %>">
+    </a>
+    <div class="media-body">
+      <h4 class="media-heading"><%= artist.username %></h4>
+    </div>
+  </div>
+<% end %>
+
+<!-- <ul class="thumbnails">
+  <li class="span4">
+    <div class="thumbnail">
+      <#% @artists.each do |a| %>
+      <img data-src="holder.js/300x200" alt="">
+      <h3><#%= a.username %></h3>
+      <p>Thumbnail caption...</p>
+      <#% end %>
+    </div>
+  </li>
+  ...
+</ul> -->

@@ -13,8 +13,14 @@
     <div class="navbar-header">
       <%= link_to "In Progress", root_path, class: "navbar-brand" %>
     </div>
+
     <div id="navbar" class="navbar-collapse collapse navbar-right">
-      <%= link_to "Log In as Artist", login_path, class: "navbar-brand" %>
+      <% if current_artist %>
+        <%= link_to "Artist Page", artist_path(current_artist), class: "navbar-brand" %>
+        <%= button_to "Logout", logout_path, method: :delete %>
+      <% else %>
+        <%= link_to "Log In as Artist", login_path, class: "navbar-brand" %>
+      <% end %>
     </div><!--/.navbar-collapse -->
   </div>
 </nav>

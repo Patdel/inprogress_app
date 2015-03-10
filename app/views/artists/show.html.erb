@@ -1,12 +1,24 @@
 
-
 <h1><%= @artist.username %></h1>
+
+<h3>Biography</h3>
 <p><%= @artist.biography %></p>
+<h3>Artist's Statement</h3>
 <p><%= @artist.artist_statement %></p>
 
 
+
 <p>Show a new Project, finished or In Progress</p>
-      <%= link_to "Add Project!", new_project_path, class: "btn btn-primary btn-lg" %>
+<%= link_to "Add Project!", new_project_path, class: "btn btn-primary btn-lg" %>
 
-
-
+<!-- Artist's Projects -->
+<ul>
+  <% @artist.projects.each do |project| %>
+    <li>
+      <h3><%= project.name %></h3>
+      <%= button_to "Delete", project, method: :delete %>
+      <%= project.description %>
+      <%= image_tag project.picture_url %>
+    </li>
+  <% end %>
+</ul>

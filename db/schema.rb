@@ -27,6 +27,12 @@ ActiveRecord::Schema.define(version: 20150306032905) do
   end
 
   create_table "projects", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "picture_url"
+    t.integer  "artist_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
